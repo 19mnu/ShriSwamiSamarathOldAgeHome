@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn about our senior citizens' care home in the Katraj-Kondhwa area of Pune. Enquire about admissions, support residents, donate essentials, or volunteer.">
+  <meta name="theme-color" content="#315b4b">
+  <title>Shri Swami Samarth Old Age Home | Pune</title>
+  <style>
+    :root {
+      --green: #315b4b;
+      --green-dark: #203f34;
+      --sage: #e8efe8;
+      --cream: #fbf7ef;
+      --gold: #c28d45;
+      --ink: #26332d;
+      --muted: #65716a;
+      --white: #fff;
+      --line: #e4e7df;
+      --shadow: 0 16px 45px rgba(34, 54, 43, .10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink); background: var(--cream);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    .container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .topline { background: var(--green-dark); color: #f7f4eb; font-size: .88rem; }
+    .topline .container { display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; flex-wrap: wrap; }
+    header { background: rgba(251,247,239,.96); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; backdrop-filter: blur(12px); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 800; line-height: 1.2; }
+    .brand-mark { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50% 50% 45% 45%; background: var(--green); color: white; font-size: 1.25rem; }
+    .brand small { display: block; margin-top: 4px; color: var(--muted); font-size: .72rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+    nav { display: flex; gap: 25px; align-items: center; }
+    nav a { text-decoration: none; font-weight: 650; font-size: .94rem; }
+    nav a:hover { color: var(--gold); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 19px; border-radius: 999px; background: var(--green); color: white; text-decoration: none; font-weight: 750; border: 1px solid var(--green); transition: transform .2s, background .2s; }
+    .btn:hover { transform: translateY(-2px); background: var(--green-dark); }
+    .btn.light { color: var(--green); background: white; border-color: white; }
+    .btn.outline { background: transparent; color: var(--green); }
+    .hero { padding: 72px 0 66px; background: radial-gradient(circle at 85% 15%, #f1e4c9 0, transparent 28%), linear-gradient(130deg, #edf2e9 0%, #fbf7ef 66%); }
+    .hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: 54px; align-items: center; }
+    .eyebrow { color: var(--green); font-size: .78rem; font-weight: 850; letter-spacing: .15em; text-transform: uppercase; }
+    h1 { font-size: clamp(2.5rem, 5vw, 4.55rem); letter-spacing: -.055em; line-height: 1.05; margin: 16px 0 22px; max-width: 720px; }
+    h1 span { color: var(--green); }
+    .hero p { color: var(--muted); font-size: 1.1rem; max-width: 590px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .photo-card { position: relative; }
+    .photo-card img { display: block; width: 100%; aspect-ratio: 4/4.4; object-fit: cover; border-radius: 28px; box-shadow: var(--shadow); }
+    .photo-note { position: absolute; left: -18px; bottom: 22px; max-width: 240px; padding: 16px 18px; border-radius: 16px; background: white; box-shadow: var(--shadow); font-weight: 750; }
+    .photo-note span { display: block; color: var(--muted); font-weight: 500; font-size: .86rem; }
+    section { padding: 78px 0; }
+    .section-head { max-width: 700px; margin-bottom: 34px; }
+    h2 { margin: 10px 0 13px; font-size: clamp(2rem, 3.5vw, 3rem); letter-spacing: -.04em; line-height: 1.15; }
+    .section-head p, .muted { color: var(--muted); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .panel { padding: 30px; background: white; border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 8px 25px rgba(34,54,43,.04); }
+    .icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 15px; background: var(--sage); font-size: 1.4rem; }
+    .panel h3 { margin: 16px 0 8px; font-size: 1.3rem; }
+    .admissions { background: #edf2e9; }
+    .admission-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 40px; align-items: start; }
+    .steps { display: grid; gap: 14px; }
+    .step { display: flex; gap: 16px; padding: 18px; background: white; border-radius: 16px; }
+    .num { flex: 0 0 34px; height: 34px; border-radius: 50%; background: var(--green); color: white; display: grid; place-items: center; font-weight: 800; }
+    .step strong { display: block; margin-bottom: 3px; }
+    .donations { background: var(--green-dark); color: white; }
+    .donations .eyebrow { color: #e9c78e; }
+    .donations .section-head p { color: #d4e0d8; }
+    .donate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: stretch; }
+    .donate-card { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16); border-radius: 24px; padding: 28px; }
+    .donate-card h3 { font-size: 1.35rem; margin-top: 0; }
+    .donate-card p { color: #d4e0d8; }
+    .qr-placeholder { width: min(230px, 100%); aspect-ratio: 1; margin: 18px auto; display: grid; place-items: center; text-align: center; padding: 20px; border: 2px dashed #b8c9be; border-radius: 16px; background: rgba(255,255,255,.05); color: #d4e0d8; }
+    .qr-placeholder strong { display: block; color: white; font-size: 1rem; }
+    .donation-note { text-align: center; font-size: .86rem; color: #c5d4ca; }
+    .volunteer { background: #fff; }
+    .volunteer-banner { background: #f4ead8; padding: 34px; border-radius: 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .volunteer-banner h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); }
+    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 32px; }
+    .contact-details { display: grid; gap: 15px; }
+    .contact-item { display: flex; gap: 13px; align-items: flex-start; }
+    .contact-item b { display: block; }
+    .contact-item a { color: var(--green); font-weight: 700; text-decoration-thickness: 1px; }
+    .map-box { min-height: 280px; border-radius: 22px; background: linear-gradient(135deg, #e8efe8, #f4ead8); display: grid; place-items: center; text-align: center; padding: 28px; border: 1px solid var(--line); }
+    footer { background: #172e26; color: #dce7df; padding: 30px 0; font-size: .9rem; }
+    footer .container { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
+    footer a { color: white; }
+    .fineprint { font-size: .82rem; color: var(--muted); margin-top: 22px; }
+    @media (max-width: 780px) {
+      .container { width: min(100% - 28px, 620px); }
+      .nav { padding: 13px 0; align-items: flex-start; flex-direction: column; gap: 14px; }
+      nav { width: 100%; gap: 14px; overflow-x: auto; padding-bottom: 3px; }
+      nav a { white-space: nowrap; font-size: .87rem; }
+      .hero { padding: 48px 0; }
+      .hero-grid, .about-grid, .admission-grid, .donate-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero-grid { gap: 34px; }
+      .photo-card { max-width: 500px; }
+      .photo-note { left: 10px; }
+      section { padding: 56px 0; }
+      .volunteer-banner { align-items: flex-start; flex-direction: column; padding: 26px; }
+      .panel, .donate-card { padding: 23px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topline">
+    <div class="container">
+      <span>Care, dignity & companionship for senior citizens</span>
+      <span>Pune, Maharashtra · India</span>
+    </div>
+  </div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Shri Swami Samarth Old Age Home home">
+        <span class="brand-mark" aria-hidden="true">♡</span>
+        <span>Shri Swami Samarth<small>Senior Citizens' Care Home</small></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#donations">Donations</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">A place to feel at home</div>
+          <h1>Every elder deserves <span>care, respect and belonging.</span></h1>
+          <p>We believe every senior citizen deserves a safe, caring environment, meaningful companionship and the dignity of being treated like family.</p>
+          <div class="actions">
+            <a class="btn" href="#admissions">Enquire about admissions</a>
+            <a class="btn outline" href="#donations">Support our residents</a>
+          </div>
+        </div>
+        <div class="photo-card">
+          <img src="assets/ngo-visit.jpg" alt="Visit to the Shri Swami Samarth senior citizens' care home in Pune">
+          <div class="photo-note">A community built on care <span>Small acts of kindness can make a real difference.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">About the care home</div>
+          <h2>More than a place to stay. A place to belong.</h2>
+          <p>Shri Swami Samarth Aaji-Aajobanchya care home aims to offer older adults a welcoming space where compassion, safety and human connection come first. Contact the team to learn about the home's current facilities, care arrangements and admission process.</p>
+        </div>
+        <div class="about-grid">
+          <article class="panel">
+            <div class="icon" aria-hidden="true">♡</div>
+            <h3>Our purpose</h3>
+            <p class="muted">To help senior citizens feel valued and supported through kindness, companionship and a respectful community.</p>
+          </article>
+          <article class="panel">
+            <div class="icon" aria-hidden="true">✦</div>
+            <h3>How you can help</h3>
+            <p class="muted">Share the home with someone who may need it, enquire about admissions, donate essential supplies, or offer your time as a volunteer.</p>
+          </article>
+        </div>
+        <p class="fineprint">Please contact the care home directly to confirm its registration details, services, visiting hours and current admission availability.</p>
+      </div>
+    </section>
+
+    <section class="admissions" id="admissions">
+      <div class="container admission-grid">
+        <div class="section-head">
+          <div class="eyebrow">Admissions & enquiries</div>
+          <h2>Looking for support for an elder in your family?</h2>
+          <p>Reach out to discuss the senior citizen's needs and understand the next steps. The team can guide you on availability, documents and arrangements.</p>
+          <div class="actions">
+            <a class="btn" href="tel:+919022974911">Call for an enquiry</a>
+            <a class="btn outline" href="#contact">View contact details</a>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="step"><span class="num">1</span><div><strong>Speak with the team</strong><span class="muted">Share your enquiry and the support needed.</span></div></div>
+          <div class="step"><span class="num">2</span><div><strong>Discuss suitability and availability</strong><span class="muted">Ask about care arrangements, facilities, fees and visiting rules.</span></div></div>
+          <div class="step"><span class="num">3</span><div><strong>Confirm the process</strong><span class="muted">The care home will explain any documents and next steps directly.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="donations" id="donations">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Donations & support</div>
+          <h2>Your kindness can make a difference.</h2>
+          <p>Every contribution can help support the daily needs and well-being of older adults. Please contact the care home to confirm current needs and the correct donation process before sending money or supplies.</p>
+        </div>
+        <div class="donate-grid">
+          <article class="donate-card">
+            <h3>Make a donation</h3>
+            <p>The secure payment QR code will be added here once it has been provided and verified by the NGO.</p>
+            <div class="qr-placeholder" aria-label="Reserved space for donation QR code">
+              <div><strong>Donation QR</strong>QR code will be added here</div>
+            </div>
+            <div class="donation-note">QR intentionally left blank for now</div>
+          </article>
+          <article class="donate-card">
+            <h3>Support in other ways</h3>
+            <p>You can also ask the team about donating useful supplies or volunteering your time.</p>
+            <ul>
+              <li>Daily-use and hygiene essentials</li>
+              <li>Clothing or other requested supplies</li>
+              <li>Companionship and activity support</li>
+              <li>Sharing the NGO with your community</li>
+            </ul>
+            <a class="btn light" href="tel:+919022974911">Ask what is needed</a>
+          </article>
+        </div>
+        <p class="fineprint" style="color:#c5d4ca">For transparency, add verified NGO registration and tax-benefit information only after it has been confirmed by the organisation.</p>
+      </div>
+    </section>
+
+    <section class="volunteer">
+      <div class="container">
+        <div class="volunteer-banner">
+          <div>
+            <div class="eyebrow">Be part of the community</div>
+            <h2>One visit, one share, one act of care.</h2>
+            <p class="muted">Interested in volunteering or organising a community visit? Get in touch to discuss how you can help.</p>
+          </div>
+          <a class="btn" href="tel:+917020603945">Volunteer / get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Contact & location</div>
+          <h2>Let's connect.</h2>
+          <p>For admissions, donations, volunteering or general enquiries, please contact the care home directly.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-details">
+            <div class="contact-item"><div class="icon" aria-hidden="true">⌖</div><div><b>Location</b><span class="muted">Uttam Residency area, Kondhwa Budruk, Pune, Maharashtra 411046 area. Please confirm the exact visiting address before travelling.</span></div></div>
+            <div class="contact-item"><div class="icon" aria-hidden="true">☎</div><div><b>Phone</b><a href="tel:+919022974911">90229 74911</a><br><a href="tel:+917020603945">70206 03945</a></div></div>
+            <div class="contact-item"><div class="icon" aria-hidden="true">◷</div><div><b>Visits</b><span class="muted">Please call ahead to confirm visiting hours.</span></div></div>
+          </div>
+          <div class="map-box">
+            <div>
+              <div style="font-size:2rem" aria-hidden="true">📍</div>
+              <h3>Serving the Pune community</h3>
+              <p class="muted">Katraj / Kondhwa Budruk area, Pune, Maharashtra</p>
+              <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Uttam+Residency+Kondhwa+Budruk+Pune" target="_blank" rel="noopener">Open in Google Maps</a>
+            </div>
+          </div>
+        </div>
+        <p class="fineprint">Website draft: please verify the official NGO name, exact address, phone numbers, services and all donation details with the organisation before public launch.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>© <span id="year"></span> Shri Swami Samarth Senior Citizens' Care Home</span>
+      <span>Made with care for the Pune community · <a href="#home">Back to top ↑</a></span>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
